@@ -1,8 +1,35 @@
 from django.shortcuts import render
+from web.forms import ContactForm, EnquiryForm
+from django.http import JsonResponse
+from django.shortcuts import render,redirect
 
+from .models import News,Team
 
 def index(request):
-    context = {"is_index": True}
+    news = News.objects.all()[:3]
+    
+    if request.method == "POST":
+        form = EnquiryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status": "true",
+                "title": "Successfully Submitted",
+                "message": "Message successfully updated",
+            }
+            return JsonResponse(response_data)
+        else:
+            print(form.errors)
+            response_data = {"status": "false", "title": "Form validation error"}
+            return JsonResponse(response_data)
+
+    else:
+        form = EnquiryForm() 
+        context = {
+            "is_contact": True,
+            "form": form,
+            "news":news,
+        }
     return render(request, "web/index.html", context)
 
 
@@ -17,12 +44,14 @@ def business_lines(request):
 
 
 def team(request):
-    context = {"is_team": True}
+    team = Team.objects.all()
+    context = {"is_team": True,"team":team,}
     return render(request, "web/team.html", context)
 
 
 def news(request):
-    context = {"is_news": True}
+    news = News.objects.all()
+    context = {"is_news": True,"news":news,}
     return render(request, "web/news.html", context)
 
 
@@ -32,5 +61,25 @@ def news_details(request):
 
 
 def contact(request):
-    context = {"is_contact": True}
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status": "true",
+                "title": "Successfully Submitted",
+                "message": "Message successfully updated",
+            }
+            return JsonResponse(response_data)
+        else:
+            print(form.errors)
+            response_data = {"status": "false", "title": "Form validation error"}
+            return JsonResponse(response_data)
+
+    else:
+        form = ContactForm() 
+        context = {
+            "is_contact": True,
+            "form": form,
+        }
     return render(request, "web/contact.html", context)

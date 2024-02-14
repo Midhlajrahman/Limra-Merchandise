@@ -326,12 +326,12 @@
                 <div class="col-xxl-6 col-xl-6 col-lg-6 align-self-center">
                     <div class="contact__form contact__form-5 mt-0 pt-0 pb-0">
                         <div class="" data-aos="fade-up" data-aos-delay="600">
-                            <form action="" method="post">
+                            <form action="" method="post" class="ajax reload">
                                 {% csrf_token %}
-                                <input type="text" name="name" placeholder="Name*" required>
-                                <input type="email" name="email" placeholder="E-mail*" required>
-                                <input type="text" name="subject" placeholder="subject*" required>
-                                <textarea name="comments" placeholder="Comment*" required></textarea>
+                                {{form.name}}
+                                {{form.email}}
+                               {{form.subject}}
+                               {{form.message}}
                                 <button class="submit btn-rollover bg-base" type="submit">Submit <i
                                         class="fa-solid fa-arrow-right"></i>
                                 </button>
@@ -359,46 +359,20 @@
             </div>
             <div class="col-xxl-12">
                 <div class="blog__list">
-
+                {% for newses in news %}
                     <article class="blog__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="blog__thumb mb-3">
                             <div class="shine">
                                 <a href="#">
-                                    <img class="border-radius-25" src="/static/web/imgs/blog/1.png" alt="Dynamic FMCG Trading Company in UAE-Dubai" style="height:300px;width:100%;object-fit:cover;">
+                                    <img class="border-radius-25" src="{{newses.image.url}}" alt="Dynamic FMCG Trading Company in UAE-Dubai" style="height:300px;width:100%;object-fit:cover;">
                                 </a>
                             </div>
-                            <div class="date">16 <br> March </div>
+                            <div class="date">{{newses.date}} <br> {{newses.month}}</div>
                         </div>
-                        <a href="#"><h4 class="blog__title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum officia nisi soluta similique dolores iusto?</h4></a>
+                        <a href="#"><h4 class="blog__title">{{newses.title}}</h4></a>
                         <a class="db-btn-arrow" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
                     </article>
-
-                    <article class="blog__item" data-aos="fade-up" data-aos-delay="600">
-                        <div class="blog__thumb mb-3">
-                            <div class="shine">
-                                <a href="#">
-                                    <img class="border-radius-25" src="/static/web/imgs/blog/2.png" alt="Dynamic FMCG Trading Company in UAE-Dubai" style="height:300px;width:100%;object-fit:cover;">
-                                </a>
-                            </div>
-                            <div class="date">16 <br> March </div>
-                        </div>
-                        <a href="#"><h4 class="blog__title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum officia nisi soluta similique dolores iusto?</h4></a>
-                        <a class="db-btn-arrow" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                    </article>
-
-                    <article class="blog__item" data-aos="fade-up" data-aos-delay="900">
-                        <div class="blog__thumb mb-3">
-                            <div class="shine">
-                                <a href="#">
-                                    <img class="border-radius-25" src="/static/web/imgs/blog/3.png" alt="Dynamic FMCG Trading Company in UAE-Dubai" style="height:300px;width:100%;object-fit:cover;">
-                                </a>
-                            </div>
-                            <div class="date">16 <br> March </div>
-                        </div>
-                       <a href="#"><h4 class="blog__title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum officia nisi soluta similique dolores iusto?</h4></a>
-                        <a class="db-btn-arrow" href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
-                    </article>
-
+                {% endfor %}
                 </div>
             </div>
         </div>

@@ -76,18 +76,24 @@
     </div>
 
     <div class="blog__form">
-      <span class="blog__form-title">Leave a reply</span>
-      <form action="" method="post">
+      <span class="blog__form-title">Get In Touch</span>
+      <form action="" method="post" class="ajax reload">
         {% csrf_token %}
         <div class="row">
           <div class="col-md-6">
-            <input type="text" name="Name" id="Name" placeholder="Name">
+           {{form.name}}
           </div>
           <div class="col-md-6">
-            <input type="email" name="E-mail" id="E-mail" placeholder="E-mail">
+          {{form.email}}
+          </div>
+          <div class="col-md-6">
+           {{form.number}}
+          </div>
+          <div class="col-md-6">
+          {{form.subject}}
           </div>
           <div class="col-md-12">
-            <textarea name="msg" id="msg" placeholder="Comment"></textarea>
+           {{form.message}}
           </div>
           <div class="contact__submitwrap">
             <button class="contact__submit btn-rollover" type="submit">Send now <i
