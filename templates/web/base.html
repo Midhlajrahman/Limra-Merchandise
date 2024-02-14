@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>{% block title %}Limra Merchandise{% endblock %}</title>
+    {% block meta %}
+    
+    {% endblock meta %}
+  <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://limramerchandise.com/" />
+        <meta property="og:title" content="Limra: Your Trusted Partner for High-Quality FMCG Goods | UAE-Dubai" />
+        <meta property="og:description" content="Limra, headquartered in UAE-Dubai, is a leading player in international trade, specializing in high-quality FMCG goods. With a commitment to excellence, we provide unparalleled solutions and a wide range of products from renowned brands worldwide. Explore our wholesale and retail offerings in personal care, food, beverages, cleaning products, baby care, and more, backed by a reliable distribution network and dedicated service." />
+        <meta property="og:image" content="http://limramerchandise.com/static/imgs/meta-tags.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="http://limramerchandise.com/" />
+        <meta property="twitter:title" content="Limra: Your Trusted Partner for High-Quality FMCG Goods | UAE-Dubai" />
+        <meta property="twitter:description" content="Limra, headquartered in UAE-Dubai, is a leading player in international trade, specializing in high-quality FMCG goods. With a commitment to excellence, we provide unparalleled solutions and a wide range of products from renowned brands worldwide. Explore our wholesale and retail offerings in personal care, food, beverages, cleaning products, baby care, and more, backed by a reliable distribution network and dedicated service." />
+        <meta property="twitter:image" content="http://limramerchandise.com/static/imgs/meta-tags.png" />
+
+    <!-- Site Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'web/imgs/icon/favicon.png' %}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <!-- All CSS Files -->
+    <link rel="stylesheet" href="{% static 'web/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/progressbar.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/master.css' %}">
+
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- Scroll to top -->
+    <button id="scroll_top" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Header area start -->
+            {% block header %}
+            {% include 'web/partials/header.html' %}
+            {% endblock %}
+
+            <div class="search__form">
+                <form action="#">
+                    <input type="text" name="s" placeholder="Search...">
+                </form>
+            </div>
+            <!-- Header area end -->
+
+            {% block offcanvas %}
+            {% include 'web/partials/offcanvas.html' %}
+            {% endblock %}
+
+            <main>
+                {% block content %}
+
+                {% endblock %}
+            </main>
+
+            {% block footer %}
+            {% include 'web/partials/footer.html' %}
+            {% endblock %}
+
+        </div>
+    </div>
+
+
+    <!-- All JS Files -->
+    <script src="{% static 'web/js/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'web/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'web/js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'web/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'web/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'web/js/counter.js' %}"></script>
+    <script src="{% static 'web/js/progressbar.js' %}"></script>
+    <script src="{% static 'web/js/aos.js' %}"></script>
+    <script src="{% static 'web/js/gsap.min.js' %}"></script>
+    <script src="{% static 'web/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'web/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'web/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'web/js/vanilla-tilt.min.js' %}"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block meta %}
+    <meta name="keywords" content="Limra, UAE, Dubai, international trade, import, export, FMCG, high-quality, wholesale, retail, personal care, food, beverages, cleaning products, baby care, distribution, reliability, efficiency, brands.">
+    <meta name="title" content="Limra: Your Trusted Partner for High-Quality FMCG Goods | UAE-Dubai" />
+    <meta name="description" content="Limra, headquartered in UAE-Dubai, is a leading player in international trade, specializing in high-quality FMCG goods. With a commitment to excellence, we provide unparalleled solutions and a wide range of products from renowned brands worldwide. Explore our wholesale and retail offerings in personal care, food, beverages, cleaning products, baby care, and more, backed by a reliable distribution network and dedicated service." />
+    <link rel="canonical" href="http://limramerchandise.com/news/" />
+{% endblock meta %}
+{% block content %}
+
+<!-- Breadcrumb area start -->
+<section class="breadcrumb__area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="breadcrumb__inner">
+          <div class="breadcrumb__left">
+            <h1 class="breadcrumb__title">News</h1>
+          </div>
+          <div class="breadcrumb__right">
+            <ul>
+              <li> <a href="{% url 'web:index' %}">Home</a> </li>
+              <li> <a href="#">News</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Breadcrumb area end -->
+
+<!-- blog area start -->
+<div class="blog-grid-area pt-80 pb-130">
+  <div class="container">
+    <div class="blog__list">
+      <article class="blog__item mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog__thumb mb-4">
+          <div class="shine">
+            <a href="{{news.get_absolute_url}}">
+              <img class="border-radius-25" src="/static/web/imgs/blog/1.png" alt="Limra's Latest Achievements and Industry Updates" style="height:300px;width:100%;object-fit:cover;">
+            </a>
+          </div>
+          <div class="date">16 <br> March </div>
+        </div>
+        
+        <a href="{{news.get_absolute_url}}">
+          <h4 class="blog__title">Standard chunk of Lorem Ipsum Our Company</h4>
+        </a>
+        <a class="db-btn-arrow" href="{{news.get_absolute_url}}">Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+     
+      <article class="blog__item mb-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="blog__thumb mb-4">
+          <div class="shine">
+            <a href="{{news.get_absolute_url}}">
+              <img class="border-radius-25" src="/static/web/imgs/blog/2.png" alt="Limra's Latest Achievements and Industry Updates" style="height:300px;width:100%;object-fit:cover;">
+            </a>
+          </div>
+          <div class="date">16 <br> March </div>
+        </div>
+        
+        <a href="{{news.get_absolute_url}}">
+          <h4 class="blog__title">These cases are many simple and easy</h4>
+        </a>
+        <a class="db-btn-arrow" href="{{news.get_absolute_url}}">Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+     
+      <article class="blog__item mb-4" data-aos="fade-up" data-aos-delay="900">
+        <div class="blog__thumb mb-4">
+          <div class="shine">
+            <a href="{{news.get_absolute_url}}">
+              <img class="border-radius-25" src="/static/web/imgs/blog/3.png" alt="Limra's Latest Achievements and Industry Updates" style="height:300px;width:100%;object-fit:cover;">
+            </a>
+          </div>
+          <div class="date">16 <br> March </div>
+        </div>
+        
+        <a href="{{news.get_absolute_url}}">
+          <h4 class="blog__title">The standard chunk of Ipsum Our Company</h4>
+        </a>
+        <a class="db-btn-arrow" href="{{news.get_absolute_url}}">Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+     
+      <article class="blog__item mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog__thumb mb-4">
+          <div class="shine">
+            <a href="{{news.get_absolute_url}}">
+              <img class="border-radius-25" src="/static/web/imgs/blog/1.png" alt="Limra's Latest Achievements and Industry Updates" style="height:300px;width:100%;object-fit:cover;">
+            </a>
+          </div>
+          <div class="date">16 <br> March </div>
+        </div>
+        
+        <a href="{{news.get_absolute_url}}">
+          <h4 class="blog__title">Standard chunk of Lorem Ipsum Our Company</h4>
+        </a>
+        <a class="db-btn-arrow" href="{{news.get_absolute_url}}">Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+     
+      <article class="blog__item mb-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="blog__thumb mb-4">
+          <div class="shine">
+            <a href="{{news.get_absolute_url}}">
+              <img class="border-radius-25" src="/static/web/imgs/blog/2.png" alt="Limra's Latest Achievements and Industry Updates" style="height:300px;width:100%;object-fit:cover;">
+            </a>
+          </div>
+          <div class="date">16 <br> March </div>
+        </div>
+        
+        <a href="{{news.get_absolute_url}}">
+          <h4 class="blog__title">These cases are many simple and easy</h4>
+        </a>
+        <a class="db-btn-arrow" href="{{news.get_absolute_url}}">Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+     
+      <article class="blog__item mb-4" data-aos="fade-up" data-aos-delay="900">
+        <div class="blog__thumb mb-4">
+          <div class="shine">
+            <a href="{{news.get_absolute_url}}">
+              <img class="border-radius-25" src="/static/web/imgs/blog/3.png" alt="Limra's Latest Achievements and Industry Updates" style="height:300px;width:100%;object-fit:cover;">
+            </a>
+          </div>
+          <div class="date">16 <br> March </div>
+        </div>
+        
+        <a href="{{news.get_absolute_url}}">
+          <h4 class="blog__title">The standard chunk of Ipsum Our Company</h4>
+        </a>
+        <a class="db-btn-arrow" href="{{news.get_absolute_url}}">Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+    </div>
+  </div>
+</div>
+<!-- /blog area end -->
+
+
+{% endblock %}

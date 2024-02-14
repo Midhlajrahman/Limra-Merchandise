@@ -1,0 +1,127 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block meta %}
+    <meta name="keywords" content="Limra, UAE, Dubai, international trade, import, export, FMCG, high-quality, wholesale, retail, personal care, food, beverages, cleaning products, baby care, distribution, reliability, efficiency, brands.">
+    <meta name="title" content="Limra: Your Trusted Partner for High-Quality FMCG Goods | UAE-Dubai" />
+    <meta name="description" content="Limra, headquartered in UAE-Dubai, is a leading player in international trade, specializing in high-quality FMCG goods. With a commitment to excellence, we provide unparalleled solutions and a wide range of products from renowned brands worldwide. Explore our wholesale and retail offerings in personal care, food, beverages, cleaning products, baby care, and more, backed by a reliable distribution network and dedicated service." />
+    <link rel="canonical" href="http://limramerchandise.com/team/" />
+{% endblock meta %}
+{% block content %}
+
+<!-- Breadcrumb area start -->
+<section class="breadcrumb__area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="breadcrumb__inner">
+          <div class="breadcrumb__left">
+            <h1 class="breadcrumb__title">Our Team</h1>
+          </div>
+          <div class="breadcrumb__right">
+            <ul>
+              <li> <a href="{% url 'web:index' %}">home</a> </li>
+              <li> <a href="#">Our Team</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Breadcrumb area end -->
+
+
+<!-- team area start -->
+<div class="team-area pt-0 pb-130">
+  <div class="container">
+    <div class="team__items-2">
+      
+      <div class="team__item-2" data-aos="fade-up" data-aos-delay="300">
+        <div class="team__thumb-2 border-radius-20">
+          <div class="shine">
+            <a href="{% url 'web:about' %}"><img class="w-100 border-radius-20" src="/static/web/imgs/team/3/1.png" alt="Meet the Expert Team Driving Limra's Success"></a>
+          </div>
+        </div>
+        <div class="team__content-2">
+          <a href="{% url 'web:about' %}">
+            <h3 class="team__name">Ralph Edwards</h3>
+          </a>
+          <p class="team__post">Merketing Department</p>
+        </div>
+      </div>
+      
+      <div class="team__item-2" data-aos="fade-up" data-aos-delay="600">
+        <div class="team__thumb-2 border-radius-20">
+          <div class="shine">
+            <a href="{% url 'web:about' %}"><img class="w-100 border-radius-20" src="/static/web/imgs/team/3/2.png" alt="Meet the Expert Team Driving Limra's Success"></a>
+          </div>
+        </div>
+        <div class="team__content-2">
+          <a href="{% url 'web:about' %}">
+            <h3 class="team__name">Annette Black</h3>
+          </a>
+          <p class="team__post">Development Department</p>
+        </div>
+      </div>
+      
+      <div class="team__item-2" data-aos="fade-up" data-aos-delay="900">
+        <div class="team__thumb-2 border-radius-20">
+          <div class="shine">
+            <a href="{% url 'web:about' %}"><img class="w-100 border-radius-20" src="/static/web/imgs/team/3/3.png" alt="Meet the Expert Team Driving Limra's Success"></a>
+          </div>
+        </div>
+        <div class="team__content-2">
+          <a href="{% url 'web:about' %}">
+            <h3 class="team__name">Savannah Nguyen</h3>
+          </a>
+          <p class="team__post">Design Department</p>
+        </div>
+      </div>
+      
+      <div class="team__item-2" data-aos="fade-up" data-aos-delay="300">
+        <div class="team__thumb-2 border-radius-20">
+          <div class="shine">
+            <a href="{% url 'web:about' %}"><img class="w-100 border-radius-20" src="/static/web/imgs/team/3/4.png" alt="Meet the Expert Team Driving Limra's Success"></a>
+          </div>
+        </div>
+        <div class="team__content-2">
+          <a href="{% url 'web:about' %}">
+            <h3 class="team__name">Ralph Edwards</h3>
+          </a>
+          <p class="team__post">Merketing Department</p>
+        </div>
+      </div>
+      
+      <div class="team__item-2" data-aos="fade-up" data-aos-delay="600">
+        <div class="team__thumb-2 border-radius-20">
+          <div class="shine">
+            <a href="{% url 'web:about' %}"><img class="w-100 border-radius-20" src="/static/web/imgs/team/3/5.png" alt="Meet the Expert Team Driving Limra's Success"></a>
+          </div>
+        </div>
+        <div class="team__content-2">
+          <a href="{% url 'web:about' %}">
+            <h3 class="team__name">Annette Black</h3>
+          </a>
+          <p class="team__post">Development Department</p>
+        </div>
+      </div>
+      
+      <div class="team__item-2" data-aos="fade-up" data-aos-delay="900">
+        <div class="team__thumb-2 border-radius-20">
+          <div class="shine">
+            <a href="{% url 'web:about' %}"><img class="w-100 border-radius-20" src="/static/web/imgs/team/3/1.png" alt="Meet the Expert Team Driving Limra's Success"></a>
+          </div>
+        </div>
+        <div class="team__content-2">
+          <a href="{% url 'web:about' %}">
+            <h3 class="team__name">Savannah Nguyen</h3>
+          </a>
+          <p class="team__post">Design Department</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- team area end -->
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block meta %}
+    <meta name="keywords" content="Limra, UAE, Dubai, international trade, import, export, FMCG, high-quality, wholesale, retail, personal care, food, beverages, cleaning products, baby care, distribution, reliability, efficiency, brands.">
+    <meta name="title" content="Limra: Your Trusted Partner for High-Quality FMCG Goods | UAE-Dubai" />
+    <meta name="description" content="Limra, headquartered in UAE-Dubai, is a leading player in international trade, specializing in high-quality FMCG goods. With a commitment to excellence, we provide unparalleled solutions and a wide range of products from renowned brands worldwide. Explore our wholesale and retail offerings in personal care, food, beverages, cleaning products, baby care, and more, backed by a reliable distribution network and dedicated service." />
+    <link rel="canonical" href="http://limramerchandise.com/contact/" />
+{% endblock meta %}
+{% block content %}
+
+<!-- Breadcrumb area start -->
+<section class="breadcrumb__area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="breadcrumb__inner">
+          <div class="breadcrumb__left">
+            <h1 class="breadcrumb__title">Contact</h1>
+          </div>
+          <div class="breadcrumb__right">
+            <ul>
+              <li> <a href="{% url 'web:index' %}">home</a> </li>
+              <li> <a href="#">Contact</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Breadcrumb area end -->
+
+<!-- contact -->
+<section class="contact__area-6 pt-80 pb-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="contact__item">
+              <i class="fa-solid fa-location-dot"></i>
+              <h4 class="title">Location</h4>
+              <p>Dhaka 102, utl 1216, road 45
+                house of street</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact__item">
+              <i class="fa-solid fa-phone"></i>
+              <h4 class="title">Call us</h4>
+              <p>(239) 555-0108 <br>
+                (907) 555-0101</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact__item">
+              <i class="fa-solid fa-envelope"></i>
+              <h4 class="title">Email</h4>
+              <a href="mailto:info@limramerchandise.com">info@limramerchandise.com</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact__item">
+              <i class="fa-solid fa-share"></i>
+              <h4 class="title">Social Media</h4>
+              <p>Facebook/Bold project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <iframe class="w-100 border-radius-25" height="500"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.91477055202!2d-74.11976321327155!3d40.69740344214894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1612427122501!5m2!1sen!2sbd"></iframe>
+
+      </div>
+    </div>
+
+    <div class="blog__form">
+      <span class="blog__form-title">Leave a reply</span>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" name="Name" id="Name" placeholder="Name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" name="E-mail" id="E-mail" placeholder="E-mail">
+          </div>
+          <div class="col-md-12">
+            <textarea name="msg" id="msg" placeholder="Comment"></textarea>
+          </div>
+          <div class="contact__submitwrap">
+            <button class="contact__submit btn-rollover" type="submit">Send now <i
+                class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- /contact -->
+
+
+{% endblock %}
